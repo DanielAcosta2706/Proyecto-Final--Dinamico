@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%-include("./partials/head.ejs") %>
+  </head>
+  <body>
+    <!--***************************************    HEADER   ***************************************-->
+    <%-include("./partials/header.ejs") %>
+    <!--***************************************    SLIDER   ***************************************-->
+    <section class="container-slider">
+      <div class="slider" id="slider">
+        <div class="slider__section">
+          <img
+            src="./images/imgSlider/slider1.jpg"
+            alt="Slider1"
+            class="slider__img"
+          />
+        </div>
+        <div class="slider__section">
+          <img
+            src="./images/imgSlider/slider2.jpg"
+            alt="Slider2"
+            class="slider__img"
+          />
+        </div>
+        <div class="slider__section">
+          <img
+            src="./images/imgSlider/slider3.jpg"
+            alt="Slider3"
+            class="slider__img"
+          />
+        </div>
+        <div class="slider__section">
+          <img
+            src="./images/imgSlider/slider4.jpg"
+            alt="Slider4"
+            class="slider__img"
+          />
+        </div>
+        <div class="slider__section">
+          <img
+            src="./images/imgSlider/slider5.jpg"
+            alt="Slider5"
+            class="slider__img"
+          />
+        </div>
+      </div>
+      <div class="slider__btn slider__btn--right" id="slider__btn--right">
+        &#62;
+      </div>
+      <div class="slider__btn slider__btn--left" id="slider__btn--left">
+        &#60;
+      </div>
+    </section>
+    <div id="servicios" class="whatsapp">
+      <a href="https://web.whatsapp.com/%F0%9F%8C%90/es" target="_blank"
+        ><img
+          src="./images/imgWhatsapp/whatsapp.jpg"
+          alt="Logowhatsapp"
+          title="whatsapp"
+      /></a>
+    </div>
+    <!--***********************************    SECTIONS CARDS   ***********************************-->
+    <main class="container__cards">
+      <div class="container__tittle">
+        <h3>
+          <i class="fas fa-grip-lines"></i> Nuestros Servicios
+          <i class="fas fa-grip-lines"></i>
+        </h3>
+      </div>
+      <% data.forEach((prod)=>{%>
+      <div class="card">
+        <a href="#">
+          <img
+            src="<%= prod.imagen%>"
+            alt="Card"
+            title="Card"
+            class="card__img"
+          />
+        </a>
+        <a href="#"><p class="card__p"><%= prod.titulo%></p></a>
+      </div>
+      <%})%>
+    </main>
+    <!--***************************************    FOOTER   ***************************************-->
+    <%-include("./partials/footer.ejs") %>
+    <script src="/slider.js"></script>
+  </body>
+</html>

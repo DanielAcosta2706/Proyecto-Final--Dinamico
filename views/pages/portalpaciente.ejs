@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%-include("../partials/head.ejs") %>
+    <link rel="stylesheet" href="/css/portalpaciente.css" />
+  </head>
+  <body>
+    <!--***************************************    HEADER   ***************************************-->
+    <%-include("../partials/header.ejs") %>
+    <!--***************************************    SECTIONS   ***************************************-->
+    <!-- Section 1 -->
+    <section class="portal">
+      <img src="/images/imgPortal/portal.jpg" alt="Portal" title="portal" />
+      <div class="portal__tittle">
+        <h2 class="tittle--port">
+          Te damos la Bienvenida a Nuestro Nuevo Servicio Portal Paciente
+        </h2>
+        <p class="subtittle--port">
+          Queremos que durante este tiempo en la que todos estamos poniendo un
+          gran esfuerzo, puedas pasarlo de la mejor manera posible.
+        </p>
+      </div>
+    </section>
+    <!-- Section 2 -->
+    <main class="mainPortal">
+      <!-- Main 1 -->
+      <div class="main1">
+        <p><span>Iniciar Sesion</span></p>
+
+        <p>
+          Para registrarse como usuario de nuestro portal comuniquese al
+          telefono <span>****_****</span>
+        </p>
+        <p>Para la autogestion de turnos recuerde lo siguiente.</p>
+        <p>
+          Si su bebe tiene menos de 6 meses, debera solicitar turnos
+          telefonicamente al <span>****_****</span>
+        </p>
+        <p>
+          Si usted tiene una nueva Obra Social, por favor comuniquese via
+          WhatsApp al <span>****_****</span>
+        </p>
+        <p>
+          Si usted es afilidiado de <span>Pami</span>, debera traer autorizacion
+          de consulta emitida por su obra social
+        </p>
+      </div>
+      <!-- Main 2 -->
+      <div class="main2">
+        <form
+          method="POST"
+          action="/infopaciente/nuevoPaciente"
+          autocomplete="off"
+        >
+          <input
+            type="list"
+            list="tipoDoc"
+            name="tipoDoc"
+            placeholder="Tipo de documento"
+            required
+          />
+          <datalist id="tipoDoc" name="tipoDoc">
+            <option value="DNI"></option>
+            <option value="LC"></option>
+            <option value="LE"></option>
+            <option value="CI"></option>
+            <option value="PASAPORTE"></option>
+          </datalist>
+
+          <input
+            type="text"
+            id="numeroDoc"
+            name="numeroDoc"
+            placeholder="Ingrese su numero de documento"
+            required
+          />
+          <input
+            type="email"
+            id="correo"
+            name="correo"
+            placeholder="Ingrese su correo electronico"
+            required
+          />
+          <input
+            type="password"
+            id="contraseña"
+            name="contraseña"
+            placeholder="Ingrese su contraseña"
+            required
+          />
+          <div class="btn">
+            <input type="submit" value="Enviar" />
+            <input type="reset" value="Cancelar" />
+          </div>
+        </form>
+        <a href="/olvidopassword" target="_blank">¿Olvido su contraseña?</a>
+      </div>
+    </main>
+    <!--***************************************    FOOTER   ***************************************-->
+    <%-include("../partials/footer.ejs") %>
+  </body>
+</html>

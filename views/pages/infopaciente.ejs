@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%-include("../partials/head.ejs") %>
+    <link rel="stylesheet" href="/css/infopaciente.css" />
+  </head>
+  <body>
+    <!--***********************************************   HEADER   ***********************************************-->
+    <header class="header">
+      <div class="logo-container">
+      <img
+        class="logo"
+        src="./images/logo.jpg"
+        alt="logo-titulo"
+        title="logo"
+      />
+      </div>
+      <div class="tittle">
+        <a class="t1" href="#">Sanatorio Margarita</a>
+        <a class="t2" href="#">COMPROMETIDOS CON TU BIENESTAR</a>
+      </div>
+      <i class="fas fa-bars nav-bar btnMenu" id="icono-menu"></i>
+      <div class="cont-menu active" id="menu">
+        <ul>
+          <li><i class="fas fa-clinic-medical icons"></i></i>Inicio</li>
+          <li><i class="fas fa-briefcase-medical icons"></i>Turnos</li>
+          <li><i class="fas fa-book-medical icons"></i>Informes de Diagnostico</li>
+          <li><i class="fas fa-microscope icons"></i>Resultados de Laboratorio</li>
+          <li><i class="fas fa-ambulance icons"></i>Cerrar Sesion</li>
+        </ul>
+      </div>
+      <div class="user">
+        <a href="#"><i class="fas fa-user"></i> Usuario</a>
+      </div>
+    </header>
+    <h1>Portal Pacientes</h1>
+    <!--************************************************   MAIN   ************************************************-->
+    <main class="mainInfo">
+      <div class="calendario">
+        <div class="calendario__top">
+          <i class="far fa-calendar-alt"></i>
+          <div class="calendario__p">
+            <p>0</p>
+            <p>Turnos</p>
+          </div>
+        </div>
+        <div class="calendario__link">
+          <a href="#">Mis Turnos </a>
+          <a href="#"> <i class="fas fa-arrow-circle-right"></i></a>
+        </div>
+      </div>
+      <div class="datos">
+        <div class="datos__top">
+          <i class="fas fa-list-alt"></i>
+          <div class="datos__p">
+            <p>Mis Datos</p>
+          </div>
+        </div>
+        <div class="datos__link">
+          <a href="#">Ver Todos </a>
+          <a href="#"> <i class="fas fa-arrow-circle-right"></i></a>
+        </div>
+      </div>
+      <div class="informes">
+        <div class="informes__top">
+          <i class="fas fa-file-medical-alt"></i>
+          <div class="informes__p">
+            <p>0</p>
+            <p>Informes de Diagnostico</p>
+          </div>
+        </div>
+        <div class="informes__link">
+          <a href="#">Ver Todos </a>
+          <a href="#"> <i class="fas fa-arrow-circle-right"></i></a>
+        </div>
+      </div>
+      <div class="laboratorio">
+        <div class="laboratorio__top">
+          <i class="fas fa-flask"></i>
+          <div class="laboratorio__p">
+            <p>0</p>
+            <p>Resultados de Laboratorio</p>
+          </div>
+        </div>
+        <div class="laboratorio__link">
+          <a href="#">Ver Todos </a>
+          <a href="#"> <i class="fas fa-arrow-circle-right"></i></a>
+        </div>
+      </div>
+    </main>
+    <!--***********************************************   SECTION   ***********************************************-->
+    <div class="containerInfo">
+      <div class="containerInfo__tittle">
+        <p><i class="fas fa-clipboard-list"></i> Ultimos Informes</p>
+      </div>
+      <div class="containerInfo__search">
+        <label for="search" class="label"
+          >Buscar <i class="fas fa-search"></i
+        ></label>
+        <input type="search" id="search" />
+      </div>
+      <div class="containerInfo__reports">
+        <p>Laboratorio o Ecografia</p>
+        <p class="date">
+          Fecha: **/**/**** <a href="#"><i class="fas fa-file-download"></i></a>
+        </p>
+      </div>
+    </div>
+    <!--  -->
+    <div class="containerTurn">
+      <div class="containerTurn__tittle">
+        <p><i class="fas fa-bell"></i> Proximos Turnos</p>
+      </div>
+
+      <div class="containerTurn__search1">
+        <p>Usted no posee turnos reservados</p>
+      </div>
+      <div class="containerTurn__search2">
+        <a href="#"><p>Mis turnos</p></a>
+      </div>
+    </div>
+    <footer>
+      <div class="copyright">
+        <span class="copyright__tittle">
+          © Copyright 2021 | Desarrollado por Daniel Acosta</span
+        >
+      </div>
+    </footer>
+    <script src="/menu.js"></script>
+  </body>
+</html>
