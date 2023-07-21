@@ -23,14 +23,14 @@ CREATE TABLE pacientes (
   numeroDoc INT(10) NOT NULL,
   correo VARCHAR(200) NOT NULL,
   contraseña VARCHAR(200) NOT NULL,
-  nombre VARCHAR(200) NOT NULL,
-  apellido VARCHAR(200) NOT NULL,
-  laboratorios VARCHAR(200) NOT NULL,
-  diagnostico VARCHAR(200) NOT NULL
+  nombre VARCHAR(200),
+  apellido VARCHAR(200),
+  laboratorios VARCHAR(200),
+  diagnostico VARCHAR(200)
 );
 
 INSERT INTO pacientes (tipoDoc, numeroDoc, correo, contraseña, nombre, apellido, laboratorios, diagnostico) 
 VALUES
-('DNI', 90827150, 'danyel2705@gmail.com', '12345', 'Jose', 'Perez', NULL, NULL),
-('PASAPORTE', 965234825, 'ajsndjabn@hotmail.com', '54321', 'Maria', 'Rodriguez', NULL, NULL),
-('LE', 662326565, 'hashdbahsd@gmail.com', '987', 'Cesar', 'Gonzalez', NULL, NULL);
+('DNI', 90827150, 'danyel2705@gmail.com', '12345', 'Jose', 'Perez', "Sin hacer", "Reservado"),
+('PASAPORTE', 965234825, 'ajsndjabn@hotmail.com', '54321', 'Maria', 'Rodriguez', "Sin hacer", "Reservado"),
+('LE', 662326565, 'hashdbahsd@gmail.com', '987', 'Cesar', 'Gonzalez', "Sin hacer", "Reservado");
