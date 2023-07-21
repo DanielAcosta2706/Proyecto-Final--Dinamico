@@ -1,4 +1,4 @@
-const databaseConnection = require("../config/database");
+const databaseConnection = require("../../config/database");
 
 const renderHome = (req, res) => {
   databaseConnection.query("SELECT * FROM cards", (error, data) => {

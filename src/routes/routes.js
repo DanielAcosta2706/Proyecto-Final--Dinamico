@@ -1,6 +1,5 @@
 const express = require("express");
 const routes = express.Router();
-const databaseConnection = require("../config/database");
 
 const {
   renderHome,

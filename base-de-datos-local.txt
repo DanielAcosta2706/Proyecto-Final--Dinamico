@@ -1,0 +1,36 @@
+CREATE TABLE cards (
+  id INT(10) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  imagen VARCHAR(200) NOT NULL,
+  titulo VARCHAR(200) NOT NULL
+);
+
+INSERT INTO cards (imagen, titulo) 
+VALUES
+('./images/imgCards/residencia.jpg', 'Residencias Medicas'),
+('./images/imgCards/guardia.jpg', 'Guardias 24 hr'),
+('./images/imgCards/especialidades.jpg', 'Especialidades Medicas'),
+('./images/imgCards/laboratorio.jpg', 'Laboratorio'),
+('./images/imgCards/covid.jpeg\r\n', 'Test Rapido Covid'),
+('./images/imgCards/cardiovascular.jpg', 'Control Preventivo Cardiovascular'),
+('./images/imgCards/internacion.jpg', 'Internaciones Clinicas y Quirurgicas'),
+('./images/imgCards/diagnostico.jpg', 'Diagnostico por Imagenes'),
+('./images/imgCards/kinesiologia.jpg', 'Kinesiologia y Rehabilitacion');
+
+
+CREATE TABLE pacientes (
+  id INT(10) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  tipoDoc VARCHAR(200) NOT NULL,
+  numeroDoc INT(10) NOT NULL,
+  correo VARCHAR(200) NOT NULL,
+  contraseña VARCHAR(200) NOT NULL,
+  nombre VARCHAR(200) NOT NULL,
+  apellido VARCHAR(200) NOT NULL,
+  laboratorios VARCHAR(200) NOT NULL,
+  diagnostico VARCHAR(200) NOT NULL
+);
+
+INSERT INTO pacientes (tipoDoc, numeroDoc, correo, contraseña, nombre, apellido, laboratorios, diagnostico) 
+VALUES
+('DNI', 90827150, 'danyel2705@gmail.com', '12345', 'Jose', 'Perez', NULL, NULL),
+('PASAPORTE', 965234825, 'ajsndjabn@hotmail.com', '54321', 'Maria', 'Rodriguez', NULL, NULL),
+('LE', 662326565, 'hashdbahsd@gmail.com', '987', 'Cesar', 'Gonzalez', NULL, NULL);
